@@ -20,7 +20,7 @@ This project serves as an interactive educational aid in automata theory and com
 - **MainWindow**: Qt-based graphical interface for user interaction.
 
 
-[Project Structure](images/Project_structure%20.png)
+[Project Structure](images/Project_structure.png)
 
 ## How to Use
 1. Input your CFG in the provided text box or load from a `.txt` file.

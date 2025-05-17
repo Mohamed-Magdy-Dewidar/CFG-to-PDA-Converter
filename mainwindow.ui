@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>894</width>
+    <height>744</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CFG to PDA Converter</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="btnLoadCFG">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 2px solid #4A90E2;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #6CA0F6, stop:1 #357ABD);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #7BB1FF, stop:1 #4285F4);
+    border-color: #2A65D9;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2A65D9, stop:1 #1B3D91);
+    border-color: #1B3D91;
+    padding-left: 8px; /* subtle shift to simulate press */
+    padding-top: 8px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Load CFG</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnClear">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 2px solid #4A90E2;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #6CA0F6, stop:1 #357ABD);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #7BB1FF, stop:1 #4285F4);
+    border-color: #2A65D9;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2A65D9, stop:1 #1B3D91);
+    border-color: #1B3D91;
+    padding-left: 8px; /* subtle shift to simulate press */
+    padding-top: 8px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnValidate">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 2px solid #4A90E2;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #6CA0F6, stop:1 #357ABD);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #7BB1FF, stop:1 #4285F4);
+    border-color: #2A65D9;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2A65D9, stop:1 #1B3D91);
+    border-color: #1B3D91;
+    padding-left: 8px; /* subtle shift to simulate press */
+    padding-top: 8px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Validate CFG</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnConvert">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 2px solid #4A90E2;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #6CA0F6, stop:1 #357ABD);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #7BB1FF, stop:1 #4285F4);
+    border-color: #2A65D9;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2A65D9, stop:1 #1B3D91);
+    border-color: #1B3D91;
+    padding-left: 8px; /* subtle shift to simulate press */
+    padding-top: 8px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Convert to PDA</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+      <widget class="QPlainTextEdit" name="txtCFGInput">
+       <property name="styleSheet">
+        <string notr="true">QPlainTextEdit {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 14px;
+    background-color: #e8f5e9; /* Light green background */
+    color: #2e7d32;            /* Dark green text */
+    padding: 8px;
+    border: 2px solid #81c784; /* Medium green border */
+    border-radius: 6px;
+    selection-background-color: #1b5e20; /* Dark green selection */
+    selection-color: #ffffff;
+}
+
+QScrollBar:vertical {
+    background: #c8e6c9; /* Light green track */
+    width: 12px;
+}
+
+QScrollBar::handle:vertical {
+    background: #66bb6a; /* Medium green handle */
+    min-height: 30px;
+    border-radius: 6px;
+}
+</string>
+       </property>
+       <property name="plainText">
+        <string>Enter CFG
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter CFG here...</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="outputArea">
+       <layout class="QHBoxLayout" name="outputLayout">
+        <item>
+         <widget class="QGraphicsView" name="graphicsView">
+          <property name="styleSheet">
+           <string notr="true">QGraphicsView {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* subtle shadow effect */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="txtPDAOutput">
+          <property name="styleSheet">
+           <string notr="true">QPlainTextEdit {
+    font-family: monospace;
+    font-size: 13px;
+    background-color: #f0f0f0;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    selection-background-color: #3399ff;
+    selection-color: #fff;
+}
+</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>894</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

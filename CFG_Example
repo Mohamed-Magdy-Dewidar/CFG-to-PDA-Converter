@@ -1,0 +1,7 @@
+Variables: S A B
+Terminals: a b
+Start: S
+Productions:
+S -> aB | bA
+A -> a | bAA | ε
+B -> b | aBB

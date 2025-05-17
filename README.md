@@ -75,8 +75,8 @@ The Clear button resets both CFG and PDA views.
 - Requires Qt framework and a C++ compiler.
 - Clone the repository:
   ```bash
-  git clone https://github.com/your-username/cfg-to-pda-converter.git
-  cd 
+  git clone https://github.com/Mohamed-Magdy-Dewidar/CFG-to-PDA-Converter.git
+  cd CFG-to-PDA-Converter
   Afterwards Just open the .Pro File via QT and run the project
 
 
